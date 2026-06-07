@@ -418,15 +418,14 @@ explicit `false` disables it.
 | --- | --- |
 | `CLAUDE_CODE_OAUTH_TOKEN` | Claude Code OAuth token (Claude Pro/Max). Generate with `claude setup-token`. |
 | `ANTHROPIC_API_KEY` | API key from [console.anthropic.com](https://console.anthropic.com). Use **instead of** the OAuth token. |
-| `OPENAI_API_KEY` | *(Optional)* OpenAI API key — the **Codex sub**. Used as a fallback **only when no Claude credential is set** (see below). |
-| `CODEX_ACCESS_TOKEN` | *(Optional)* ChatGPT/Codex workspace access token. Best-effort fallback; `OPENAI_API_KEY` is the supported Codex path. |
+| `OPENAI_API_KEY` | *(Optional)* OpenAI API key — the **OpenAI Responses sub**. Used as a fallback **only when no Claude credential is set** (see below). |
 | `SLACK_WEBHOOK_URL` | *(Optional)* Slack [Incoming Webhook](https://api.slack.com/messaging/webhooks) URL. |
 | `RESEND_API_KEY` | *(Optional)* [Resend](https://resend.com) API key. With `EMAIL_TO` set, every item is also emailed (same text as Slack). |
 
 > You only need **one** of `CLAUDE_CODE_OAUTH_TOKEN` or `ANTHROPIC_API_KEY`.
 > `OUTPUT_LANGUAGE` can live in either tab, whichever you prefer.
 
-#### Engine: Claude is the main, Codex is the sub
+#### Engine: Claude is the main, OpenAI Responses is the sub
 
 Every LLM step (domain pick, the three research sections, Site Watch summaries,
 auto-labelling) runs through one local composite action,
@@ -435,17 +434,15 @@ per run:
 
 - **Claude (main)** — used whenever `CLAUDE_CODE_OAUTH_TOKEN` **or**
   `ANTHROPIC_API_KEY` is present. This is the default and the recommended setup.
-- **OpenAI Codex (sub)** — a *fallback* used **only when neither Claude secret is
-  set** but `OPENAI_API_KEY` (or `CODEX_ACCESS_TOKEN`) is. It runs
-  [`openai/codex-action`](https://github.com/openai/codex-action) read-only and
-  fetches live sources from the runner where needed; its reply is normalised back
-  to the same schema-shaped JSON by `scripts/extract_json.py`, so the deterministic
-  Python publishers don't change.
+- **OpenAI Responses (sub)** — a *fallback* used **only when neither Claude secret
+  is set** but `OPENAI_API_KEY` is. It calls the Responses API with the web search
+  tool where needed; its reply is normalised back to the same schema-shaped JSON,
+  so the deterministic Python publishers don't change.
 
-If both a Claude and an OpenAI credential are set, **Claude wins** — Codex never
+If both a Claude and an OpenAI credential are set, **Claude wins** — OpenAI never
 runs. With no credential at all, every job still succeeds and prints a note.
-Optionally pin the Codex model with the `OPENAI_MODEL` variable (empty = Codex's
-default).
+Optionally pin the OpenAI model with the `OPENAI_MODEL` variable (empty =
+`gpt-5-mini`).
 
 ---
 

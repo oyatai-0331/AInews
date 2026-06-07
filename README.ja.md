@@ -397,13 +397,12 @@ Secrets（API キー・OAuth トークン・Slack Webhook・Resend キー）は*
 | --- | --- |
 | `CLAUDE_CODE_OAUTH_TOKEN` | Claude Code OAuth トークン（Claude Pro/Max）。`claude setup-token` で生成。 |
 | `ANTHROPIC_API_KEY` | [console.anthropic.com](https://console.anthropic.com) の API キー。OAuth トークンの**代わり**に使用。 |
-| `OPENAI_API_KEY` | *(任意)* OpenAI API キー。Claude の認証情報が無い場合だけ Codex フォールバックとして使われます。 |
-| `CODEX_ACCESS_TOKEN` | *(任意)* ChatGPT/Codex ワークスペース用トークン。ベストエフォートのフォールバックで、通常は `OPENAI_API_KEY` を使います。 |
+| `OPENAI_API_KEY` | *(任意)* OpenAI API キー。Claude の認証情報が無い場合だけ OpenAI Responses フォールバックとして使われます。 |
 | `SLACK_WEBHOOK_URL` | *(任意)* Slack [Incoming Webhook](https://api.slack.com/messaging/webhooks) URL。 |
 | `RESEND_API_KEY` | *(任意)* [Resend](https://resend.com) の API キー。`EMAIL_TO` を設定すると各項目が（Slack と同じ文面で）メール送信される。 |
 
 > `CLAUDE_CODE_OAUTH_TOKEN` と `ANTHROPIC_API_KEY` は**どちらか1つ**でOK。
-> Claude の Secret がある場合は Claude が優先されます。Claude の Secret が無く、`OPENAI_API_KEY` がある場合だけ Codex が使われます。
+> Claude の Secret がある場合は Claude が優先されます。Claude の Secret が無く、`OPENAI_API_KEY` がある場合だけ OpenAI Responses が使われます。
 > `OUTPUT_LANGUAGE` はどちらのタブに置いても読み込めます。
 
 ---

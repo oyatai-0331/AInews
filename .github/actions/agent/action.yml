@@ -1,21 +1,21 @@
-name: "Research Agent (Claude primary, Codex fallback)"
+name: "Research Agent (Claude primary, OpenAI fallback)"
 description: >
   Run one schema-constrained agent turn and return its JSON as `structured_output`.
-  MAIN is Claude (anthropics/claude-code-action); the SUB is OpenAI Codex
-  (openai/codex-action), used ONLY when no Claude credential is present but an
-  OpenAI key / Codex access token is. Either way the caller gets the same
+  MAIN is Claude (anthropics/claude-code-action); the SUB is the OpenAI
+  Responses API with web search, used ONLY when no Claude credential is present
+  but an OpenAI API key is. Either way the caller gets the same
   `structured_output` JSON string, so the deterministic Python publishers don't
   care which engine produced it.
 
 inputs:
   prompt:
-    description: The task prompt (written Claude-style; Codex follows it too).
+    description: The task prompt (written Claude-style; OpenAI follows it too).
     required: true
   json-schema:
     description: >
       Bare JSON Schema string the output must conform to. Pass it WITHOUT
       surrounding quotes; this action quotes it for Claude's --json-schema and
-      embeds it in Codex's prompt as the output contract.
+      embeds it in the OpenAI fallback prompt as the output contract.
     required: true
   allowed-tools:
     description: Claude allowedTools list (e.g. "WebSearch,WebFetch,Read").
@@ -27,9 +27,8 @@ inputs:
     default: "30"
   web-search:
     description: >
-      "true" tells the Codex sub to use live source fetching when needed. The
-      current Codex CLI does not expose a --search flag, so Codex should use
-      read-only runner commands such as curl or Python urllib to open URLs.
+      "true" enables the OpenAI web_search tool for the OpenAI fallback. Set
+      "false" for read-only jobs such as the domain picker.
     required: false
     default: "true"
   anthropic-model:
@@ -37,7 +36,7 @@ inputs:
     required: false
     default: "claude-sonnet-4-6"
   openai-model:
-    description: Model id for the Codex sub. Empty lets Codex pick its default.
+    description: Model id for the OpenAI fallback. Empty uses gpt-5-mini.
     required: false
     default: ""
   claude-code-oauth-token:
@@ -49,40 +48,32 @@ inputs:
     required: false
     default: ""
   openai-api-key:
-    description: secrets.OPENAI_API_KEY (the supported Codex credential).
+    description: secrets.OPENAI_API_KEY.
     required: false
     default: ""
-  codex-access-token:
-    description: >
-      secrets.CODEX_ACCESS_TOKEN — best-effort passthrough for ChatGPT/Codex
-      workspace tokens. OPENAI_API_KEY is the fully-supported path.
-    required: false
-    default: ""
-
 outputs:
   structured_output:
     description: The agent's JSON object as a string (empty if no credential).
-    value: ${{ steps.claude.outputs.structured_output || steps.normalize.outputs.json }}
+    value: ${{ steps.claude.outputs.structured_output || steps.openai.outputs.json }}
 
 runs:
   using: composite
   steps:
     # Decide which engine to use. Claude wins whenever a Claude credential is
-    # present; Codex is the sub, reached only as a fallback.
-    - name: Pick engine (Claude main → Codex sub)
+    # present; OpenAI Responses is the sub, reached only as a fallback.
+    - name: Pick engine (Claude main → OpenAI sub)
       id: engine
       shell: bash
       env:
         A: ${{ inputs.anthropic-api-key }}
         O: ${{ inputs.claude-code-oauth-token }}
         P: ${{ inputs.openai-api-key }}
-        T: ${{ inputs.codex-access-token }}
       run: |
         if [ -n "$A" ] || [ -n "$O" ]; then
           echo "engine=claude" >> "$GITHUB_OUTPUT"
-        elif [ -n "$P" ] || [ -n "$T" ]; then
-          echo "engine=codex" >> "$GITHUB_OUTPUT"
-          echo "::notice title=Research Agent::No Claude credential — falling back to the OpenAI Codex sub."
+        elif [ -n "$P" ]; then
+          echo "engine=openai" >> "$GITHUB_OUTPUT"
+          echo "::notice title=Research Agent::No Claude credential — falling back to OpenAI Responses with web search."
         else
           echo "engine=none" >> "$GITHUB_OUTPUT"
         fi
@@ -102,51 +93,16 @@ runs:
           --model ${{ inputs.anthropic-model }}
           --json-schema '${{ inputs.json-schema }}'
 
-    # SUB: OpenAI Codex. The official action exposes only `final-message`, and
-    # its --output-schema assumes OpenAI strict schemas (every field required),
-    # which ours aren't — so we DON'T use --output-schema. Instead we hand Codex
-    # the schema in the prompt as a hard output contract, run it read-only (it
-    # only needs to read repo files and fetch web pages), and recover the JSON
-    # object with extract_json.py.
-    - name: Run sub (OpenAI Codex)
-      id: codex
-      if: ${{ steps.engine.outputs.engine == 'codex' }}
-      uses: openai/codex-action@v1
-      env:
-        CODEX_ACCESS_TOKEN: ${{ inputs.codex-access-token }}
-      with:
-        openai-api-key: ${{ inputs.openai-api-key }}
-        model: ${{ inputs.openai-model }}
-        sandbox: read-only
-        codex-args: ""
-        prompt: |
-          ${{ inputs.prompt }}
-
-          ---
-          CODEX FALLBACK SOURCE-GATHERING INSTRUCTIONS:
-          Claude-style WebSearch/WebFetch tool names may appear above, but the
-          Codex CLI in this GitHub Action does not expose those tools or a
-          --search flag. When live sources are needed, use read-only shell/network
-          commands available in the GitHub runner, such as curl or Python urllib,
-          to open `config/priority_sources.md` URLs and any concrete links you
-          follow. Do not write to the repository. Only include titles, dates,
-          sources, and URLs from pages you actually opened. If live fetching
-          fails, return an empty but schema-valid JSON object instead of guessing.
-
-          ---
-          STRICT OUTPUT CONTRACT (read carefully):
-          Your final message MUST be exactly ONE JSON object and NOTHING else —
-          no explanation, no commentary, no Markdown code fences. It MUST conform
-          to this JSON Schema (omit properties that are optional and unknown;
-          never invent data to fill a field):
-          ${{ inputs.json-schema }}
-
-    # Recover the single JSON object from Codex's free-form final message.
-    # Runs from the checked-out workspace root, so scripts/ resolves directly.
-    - name: Normalise Codex output to clean JSON
-      id: normalize
-      if: ${{ steps.engine.outputs.engine == 'codex' }}
+    # SUB: OpenAI Responses API. Uses the built-in web_search tool when the
+    # caller asks for live research, and Structured Outputs for schema-shaped JSON.
+    - name: Run sub (OpenAI Responses)
+      id: openai
+      if: ${{ steps.engine.outputs.engine == 'openai' }}
       shell: bash
       env:
-        RAW: ${{ steps.codex.outputs.final-message }}
-      run: python3 scripts/extract_json.py
+        OPENAI_API_KEY: ${{ inputs.openai-api-key }}
+        OPENAI_MODEL: ${{ inputs.openai-model }}
+        WEB_SEARCH: ${{ inputs.web-search }}
+        JSON_SCHEMA: ${{ inputs.json-schema }}
+        AGENT_PROMPT: ${{ inputs.prompt }}
+      run: python3 scripts/openai_responses_agent.py

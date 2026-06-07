@@ -21,13 +21,13 @@ name: Auto Research
 # secret (CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY). With no key yet, every
 # job still succeeds and prints a note telling you what to add.
 #
-# Engine: Claude is the MAIN and OpenAI Codex is the SUB. Every LLM step runs
+# Engine: Claude is the MAIN and OpenAI Responses is the SUB. Every LLM step runs
 # through the local composite action .github/actions/agent, which uses Claude
 # (anthropics/claude-code-action) whenever a Claude credential is present, and
-# falls back to Codex (openai/codex-action) ONLY when there is no Claude
-# credential but OPENAI_API_KEY (or CODEX_ACCESS_TOKEN) is set. Either engine
+# falls back to OpenAI Responses with web search ONLY when there is no Claude
+# credential but OPENAI_API_KEY is set. Either engine
 # returns the same schema-shaped `structured_output`, so the deterministic Python
-# publishers are unchanged. OPENAI_API_KEY is the fully-supported Codex path.
+# publishers are unchanged.
 on:
   workflow_dispatch: {}
   schedule:
@@ -90,13 +90,12 @@ jobs:
           A: ${{ secrets.ANTHROPIC_API_KEY }}
           O: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           P: ${{ secrets.OPENAI_API_KEY }}
-          T: ${{ secrets.CODEX_ACCESS_TOKEN }}
         run: |
-          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ] || [ -n "$T" ]; then
+          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ]; then
             echo "has_key=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_key=false" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Auto Research::No LLM credential yet — the domain picker is skipped; this run uses the remembered or default domain. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (Codex, the sub), to enable it."
+            echo "::notice title=Auto Research::No LLM credential yet — the domain picker is skipped; this run uses the remembered or default domain. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (OpenAI Responses, the sub), to enable it."
           fi
 
       - name: Restore the remembered choice + site look from the state branch
@@ -110,7 +109,7 @@ jobs:
           OUTPUT_LANGUAGE: ${{ vars.OUTPUT_LANGUAGE || secrets.OUTPUT_LANGUAGE }}
         run: python3 scripts/select_domain.py prepare
 
-      - name: Pick the domain + language (Claude → Codex)
+      - name: Pick the domain + language (Claude → OpenAI)
         id: pick
         # A picker failure must not block the run — finalize then falls back to the
         # remembered choice or the default domain/language.
@@ -126,7 +125,6 @@ jobs:
           claude-code-oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          codex-access-token: ${{ secrets.CODEX_ACCESS_TOKEN }}
           json-schema: '{"type":"object","additionalProperties":false,"properties":{"domain":{"type":"string","enum":["research","tech","business","hobby","finance"]},"lang":{"type":"string","enum":["en","ja"]}},"required":["domain","lang"]}'
           prompt: |
             Choose ONE research domain for today's run, and the language to write in.
@@ -164,7 +162,7 @@ jobs:
           RESEARCH_DOMAIN: ${{ steps.finalize.outputs.domain }}
         run: python3 scripts/site_config.py prepare
 
-      - name: Design the site look — title, tagline, brand colour (Claude → Codex)
+      - name: Design the site look — title, tagline, brand colour (Claude → OpenAI)
         id: site_pick
         # A design failure must not block the run — finalize then keeps the
         # remembered look or the shipped default.
@@ -180,7 +178,6 @@ jobs:
           claude-code-oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          codex-access-token: ${{ secrets.CODEX_ACCESS_TOKEN }}
           json-schema: '{"type":"object","additionalProperties":false,"properties":{"site_title":{"type":"string"},"tagline":{"type":"string"},"brand_color":{"type":"string"}},"required":["site_title","tagline","brand_color"]}'
           prompt: |
             Design the look of this lab's published findings site.
@@ -233,13 +230,12 @@ jobs:
           A: ${{ secrets.ANTHROPIC_API_KEY }}
           O: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           P: ${{ secrets.OPENAI_API_KEY }}
-          T: ${{ secrets.CODEX_ACCESS_TOKEN }}
         run: |
-          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ] || [ -n "$T" ]; then
+          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ]; then
             echo "has_key=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_key=false" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Auto Research::No LLM credential yet. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (Codex, the sub), under Settings -> Secrets and variables -> Actions to enable research. Skipping for now."
+            echo "::notice title=Auto Research::No LLM credential yet. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (OpenAI Responses, the sub), under Settings -> Secrets and variables -> Actions to enable research. Skipping for now."
           fi
 
       - name: Summarise already-published issues (Python)
@@ -252,7 +248,7 @@ jobs:
           EXISTING_CONTEXT_MAX: ${{ vars.EXISTING_CONTEXT_MAX }}
         run: python3 scripts/existing_context.py news .research_context/news.md
 
-      - name: Research — latest news (Claude → Codex)
+      - name: Research — latest news (Claude → OpenAI)
         id: research
         if: ${{ steps.preflight.outputs.has_key == 'true' }}
         uses: ./.github/actions/agent
@@ -265,7 +261,6 @@ jobs:
           claude-code-oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          codex-access-token: ${{ secrets.CODEX_ACCESS_TOKEN }}
           json-schema: '{"type":"object","additionalProperties":false,"properties":{"items":{"type":"array","items":{"type":"object","additionalProperties":false,"properties":{"title":{"type":"string"},"url":{"type":"string"},"source":{"type":"string"},"date":{"type":"string"},"takeaway":{"type":"string"}},"required":["title","url","takeaway"]}}},"required":["items"]}'
           prompt: |
             DOMAIN: this run covers the **${{ needs.select.outputs.domain }}** domain.
@@ -361,13 +356,12 @@ jobs:
           A: ${{ secrets.ANTHROPIC_API_KEY }}
           O: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           P: ${{ secrets.OPENAI_API_KEY }}
-          T: ${{ secrets.CODEX_ACCESS_TOKEN }}
         run: |
-          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ] || [ -n "$T" ]; then
+          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ]; then
             echo "has_key=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_key=false" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Auto Research::No LLM credential yet. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (Codex, the sub), under Settings -> Secrets and variables -> Actions to enable research. Skipping for now."
+            echo "::notice title=Auto Research::No LLM credential yet. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (OpenAI Responses, the sub), under Settings -> Secrets and variables -> Actions to enable research. Skipping for now."
           fi
 
       - name: Summarise already-published issues (Python)
@@ -380,7 +374,7 @@ jobs:
           EXISTING_CONTEXT_MAX: ${{ vars.EXISTING_CONTEXT_MAX }}
         run: python3 scripts/existing_context.py hypotheses .research_context/hypotheses.md
 
-      - name: Research — hypotheses (Claude → Codex)
+      - name: Research — hypotheses (Claude → OpenAI)
         id: research
         if: ${{ steps.preflight.outputs.has_key == 'true' }}
         uses: ./.github/actions/agent
@@ -393,7 +387,6 @@ jobs:
           claude-code-oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          codex-access-token: ${{ secrets.CODEX_ACCESS_TOKEN }}
           json-schema: '{"type":"object","additionalProperties":false,"properties":{"hypotheses":{"type":"array","items":{"type":"object","additionalProperties":false,"properties":{"statement":{"type":"string"},"rationale":{"type":"string"},"experiment":{"type":"string"},"risk":{"type":"string"},"citation_title":{"type":"string"},"citation_url":{"type":"string"}},"required":["statement","rationale","experiment"]}}},"required":["hypotheses"]}'
           prompt: |
             DOMAIN: this run covers the **${{ needs.select.outputs.domain }}** domain.
@@ -495,13 +488,12 @@ jobs:
           A: ${{ secrets.ANTHROPIC_API_KEY }}
           O: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           P: ${{ secrets.OPENAI_API_KEY }}
-          T: ${{ secrets.CODEX_ACCESS_TOKEN }}
         run: |
-          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ] || [ -n "$T" ]; then
+          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ]; then
             echo "has_key=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_key=false" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Auto Research::No LLM credential yet. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (Codex, the sub), under Settings -> Secrets and variables -> Actions to enable research. Skipping for now."
+            echo "::notice title=Auto Research::No LLM credential yet. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (OpenAI Responses, the sub), under Settings -> Secrets and variables -> Actions to enable research. Skipping for now."
           fi
 
       - name: Summarise already-published issues (Python)
@@ -514,7 +506,7 @@ jobs:
           EXISTING_CONTEXT_MAX: ${{ vars.EXISTING_CONTEXT_MAX }}
         run: python3 scripts/existing_context.py related .research_context/related.md
 
-      - name: Research — related work (Claude → Codex)
+      - name: Research — related work (Claude → OpenAI)
         id: research
         if: ${{ steps.preflight.outputs.has_key == 'true' }}
         uses: ./.github/actions/agent
@@ -527,7 +519,6 @@ jobs:
           claude-code-oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          codex-access-token: ${{ secrets.CODEX_ACCESS_TOKEN }}
           json-schema: '{"type":"object","additionalProperties":false,"properties":{"themes":{"type":"array","items":{"type":"object","additionalProperties":false,"properties":{"name":{"type":"string"},"summary":{"type":"string"},"papers":{"type":"array","items":{"type":"object","additionalProperties":false,"properties":{"title":{"type":"string"},"url":{"type":"string"},"note":{"type":"string"}},"required":["title"]}}},"required":["name","summary"]}},"open_gaps":{"type":"array","items":{"type":"string"}}},"required":["themes","open_gaps"]}'
           prompt: |
             DOMAIN: this run covers the **${{ needs.select.outputs.domain }}** domain.
@@ -647,13 +638,12 @@ jobs:
           A: ${{ secrets.ANTHROPIC_API_KEY }}
           O: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           P: ${{ secrets.OPENAI_API_KEY }}
-          T: ${{ secrets.CODEX_ACCESS_TOKEN }}
         run: |
-          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ] || [ -n "$T" ]; then
+          if [ -n "$A" ] || [ -n "$O" ] || [ -n "$P" ]; then
             echo "has_key=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_key=false" >> "$GITHUB_OUTPUT"
-            echo "::notice title=Site Watch::No LLM credential yet. Snapshots are still saved, but change summaries are skipped. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (Codex, the sub), under Settings -> Secrets and variables -> Actions to enable summaries."
+            echo "::notice title=Site Watch::No LLM credential yet. Snapshots are still saved, but change summaries are skipped. Add CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (Claude, the main), or OPENAI_API_KEY (OpenAI Responses, the sub), under Settings -> Secrets and variables -> Actions to enable summaries."
           fi
 
       - name: Set up Python
@@ -681,7 +671,7 @@ jobs:
           WATCH_MAX_DIFF: ${{ vars.WATCH_MAX_DIFF }}
         run: python3 scripts/watch_fetch.py
 
-      - name: Summarise the diffs (Claude → Codex)
+      - name: Summarise the diffs (Claude → OpenAI)
         id: summary
         if: ${{ steps.preflight.outputs.has_key == 'true' && steps.watch.outputs.changed == 'true' }}
         uses: ./.github/actions/agent
@@ -694,7 +684,6 @@ jobs:
           claude-code-oauth-token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          codex-access-token: ${{ secrets.CODEX_ACCESS_TOKEN }}
           json-schema: '{"type":"object","additionalProperties":false,"properties":{"pages":{"type":"array","items":{"type":"object","additionalProperties":false,"properties":{"slug":{"type":"string"},"headline":{"type":"string"},"summary":{"type":"string"},"changes":{"type":"array","items":{"type":"object","additionalProperties":false,"properties":{"title":{"type":"string"},"detail":{"type":"string"},"url":{"type":"string"}},"required":["title"]}},"no_meaningful_change":{"type":"boolean"}},"required":["slug","headline","summary","changes"]}}},"required":["pages"]}'
           prompt: |
             One or more web pages this lab watches have CHANGED since the last
