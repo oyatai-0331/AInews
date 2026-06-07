@@ -1,0 +1,133 @@
+Hugging Face
+Models
+Datasets
+Spaces
+Buckets
+NEW
+Docs
+Pricing
+Website
+Tasks
+HuggingChat
+Collections
+Languages
+Organizations
+Community
+Blog
+Posts
+Daily Papers
+Learn
+Discord
+Forum
+GitHub
+Solutions
+Team & Enterprise
+Hugging Face PRO
+Enterprise Support
+Inference Providers
+Inference Endpoints
+Storage Buckets
+Log In
+Sign Up
+NEW
+Get trending papers in your email inbox once a day!
+Subscribe
+Daily Papers
+byAK and the research community
+Daily
+Weekly
+Monthly
+Jun 5
+Submitted by
+lilianahotsko
+68
+Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution
+University of Waterloo
+3
+Submitted by
+elijah0430
+45
+ArcANE: Do Role-Playing Language Agents Stay in Character at the Right Time?
+Seoul National University
+4
+Submitted by
+starsuzi
+38
+TIDE: Proactive Multi-Problem Discovery via Template-Guided Iteration
+KAIST AI
+5
+Submitted by
+JiayuJeff
+37
+AdaPlanBench: Evaluating Adaptive Planning in Large Language Model Agents under World and User Constraints
+University of Illinois at Urbana-Champaign
+21
+4
+Submitted by
+songtingyu
+34
+VideoKR: Towards Knowledge- and Reasoning-Intensive Video Understanding
+Yale University
+16
+2
+Submitted by
+elijah0430
+24
+RobotValues: Evaluating Household Robots When Human Values Conflict
+Seoul National University
+5
+Submitted by
+HanxuHU
+23
+Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation
+University of Zurich, Department of Computational Linguistics
+8
+3
+Submitted by
+jianzongwu
+21
+LoomVideo: Unifying Multimodal Inputs into Video Generation and Editing
+Peking University
+43
+2
+Submitted by
+thaoshibe
+19
+Personal AI Agent for Camera Roll VQA
+·
+5 authors
+9
+2
+Submitted by
+Keven16
+19
+Rethinking Continual Experience Internalization for Self-Evolving LLM Agents
+·
+10 authors
+3
+2
+Submitted by
+NoamIssachar
+16
+Complexity-Balanced Diffusion Splitting
+The Hebrew University of Jerusalem
+12
+2
+Submitted by
+ruizhaocv
+15
+Dream.exe: Can Video Generation Models Dream Executable Robot Manipulation?
+·
+9 authors
+21
+3
+System theme
+TOS
+Privacy
+About
+Careers
+Models
+Datasets
+Spaces
+Pricing
+Docs

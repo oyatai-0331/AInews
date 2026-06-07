@@ -1,0 +1,157 @@
+BACK TO BLOG
+Changelog
+COPY RSS FEED URL
+FOLLOW @GHCHANGELOG ON X
+ALL
+NEW RELEASES
+IMPROVEMENTS
+RETIRED
+FILTERS
+June 2026
+JUN.05
+RETIRED
+GPT-5.2 and GPT-5.2-Codex deprecated
+COPILOT
+JUN.05
+IMPROVEMENT
+CodeQL 2.25.6 adds Swift 6.3.2 support and improves C# coverage
+APPLICATION SECURITY
+JUN.05
+IMPROVEMENT
+Enterprise-managed plugins in VS Code in public preview
+CLIENT APPS
+...
++2
+JUN.04
+IMPROVEMENT
+Fix with Copilot for failing Actions now in Pro, Pro+, and Max
+COPILOT
+JUN.04
+RELEASE
+Agent tasks REST API now available for Copilot Pro, Pro+, and Max
+COPILOT
+JUN.04
+RELEASE
+Budget and usage management APIs now generally available
+ACCOUNT MANAGEMENT
+...
++1
+JUN.04
+RELEASE
+API access to billing usage reports now generally available
+ENTERPRISE MANAGEMENT TOOLS
+JUN.04
+RELEASE
+Larger context windows and configurable reasoning levels for GitHub Copilot
+COPILOT
+JUN.04
+RELEASE
+GitHub Copilot in Visual Studio — May update
+COPILOT
+JUN.04
+RELEASE
+Enterprise Teams is now generally available
+ENTERPRISE MANAGEMENT TOOLS
+JUN.04
+RELEASE
+Copilot Chat brings richer context to pull requests
+COPILOT
+JUN.03
+RELEASE
+GitHub Copilot in Visual Studio Code, May releases
+COPILOT
+JUN.02
+RETIRED
+GPT-4.1 deprecated
+COPILOT
+JUN.02
+IMPROVEMENT
+Expanded technical preview availability for the GitHub Copilot app
+CLIENT APPS
+...
++1
+JUN.02
+RELEASE
+Copilot SDK is now generally available
+COPILOT
+JUN.02
+RELEASE
+Copilot CLI: Improved UI, rubber duck, prompt scheduling, and voice input
+CLIENT APPS
+...
++1
+JUN.02
+RELEASE
+Cloud and local sandboxes for GitHub Copilot now in public preview
+APPLICATION SECURITY
+...
++2
+JUN.02
+IMPROVEMENT
+Shape Copilot code review around your team
+COPILOT
+JUN.02
+RELEASE
+GitHub Copilot code review for Azure Repos is now in technical preview
+COPILOT
+JUN.02
+RELEASE
+Extend GitHub with agent apps
+COPILOT
+JUN.02
+IMPROVEMENT
+Introducing Copilot CLI and agentic capabilities enhancements in JetBrains IDEs
+COPILOT
+JUN.02
+RELEASE
+Gemini models in Copilot CLI, cloud agent, and the Copilot app
+COPILOT
+JUN.02
+RELEASE
+Gain insights across your agent sessions with /chronicle
+COPILOT
+JUN.02
+RELEASE
+Schedule and automate tasks with Copilot cloud agent
+COPILOT
+JUN.02
+RELEASE
+Copilot Memory supports user preferences for Business, Enterprise
+COPILOT
+...
++1
+JUN.02
+RELEASE
+MAI-Code-1-Flash is now available for GitHub Copilot
+COPILOT
+JUN.02
+RELEASE
+GitHub Copilot in Eclipse: BYOK, skills, and chat updates
+COPILOT
+JUN.01
+RELEASE
+Evaluation models in auto for individual plans
+COPILOT
+JUN.01
+RELEASE
+Updates to GitHub Copilot billing and plans
+COPILOT
+May 2026
+April 2026
+March 2026
+February 2026
+January 2026
+Pagination
+PREV
+2026
+2025
+2024
+...
+2018
+NEXT
+Subscribe to our developer newsletter
+Discover tips, technical guides, and best practices in our biweekly newsletter just for devs.
+Enter your email*
+Subscribe
+By submitting, I agree to let GitHub and its affiliates use my information for personalized communications, targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details.
+BACK TO TOP
