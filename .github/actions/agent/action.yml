@@ -27,8 +27,9 @@ inputs:
     default: "30"
   web-search:
     description: >
-      "true" to let the Codex sub use live web search (--search). Set "false"
-      for Read-only jobs (the domain picker) so Codex doesn't browse needlessly.
+      "true" tells the Codex sub to use live source fetching when needed. The
+      current Codex CLI does not expose a --search flag, so Codex should use
+      read-only runner commands such as curl or Python urllib to open URLs.
     required: false
     default: "true"
   anthropic-model:
@@ -102,11 +103,11 @@ runs:
           --json-schema '${{ inputs.json-schema }}'
 
     # SUB: OpenAI Codex. The official action exposes only `final-message`, and
-    # its --output-schema is unreliable with web search active (openai/codex#15451)
-    # and assumes OpenAI strict schemas (every field required) which ours aren't —
-    # so we DON'T use --output-schema. Instead we hand Codex the schema in the
-    # prompt as a hard output contract, run it read-only (it only needs to read
-    # repo files + search), and recover the JSON object with extract_json.py.
+    # its --output-schema assumes OpenAI strict schemas (every field required),
+    # which ours aren't — so we DON'T use --output-schema. Instead we hand Codex
+    # the schema in the prompt as a hard output contract, run it read-only (it
+    # only needs to read repo files and fetch web pages), and recover the JSON
+    # object with extract_json.py.
     - name: Run sub (OpenAI Codex)
       id: codex
       if: ${{ steps.engine.outputs.engine == 'codex' }}
@@ -117,10 +118,20 @@ runs:
         openai-api-key: ${{ inputs.openai-api-key }}
         model: ${{ inputs.openai-model }}
         sandbox: read-only
-        # codex-args takes a JSON-array string (the action's documented contract).
-        codex-args: ${{ inputs.web-search == 'true' && '["--search"]' || '' }}
+        codex-args: ""
         prompt: |
           ${{ inputs.prompt }}
+
+          ---
+          CODEX FALLBACK SOURCE-GATHERING INSTRUCTIONS:
+          Claude-style WebSearch/WebFetch tool names may appear above, but the
+          Codex CLI in this GitHub Action does not expose those tools or a
+          --search flag. When live sources are needed, use read-only shell/network
+          commands available in the GitHub runner, such as curl or Python urllib,
+          to open `config/priority_sources.md` URLs and any concrete links you
+          follow. Do not write to the repository. Only include titles, dates,
+          sources, and URLs from pages you actually opened. If live fetching
+          fails, return an empty but schema-valid JSON object instead of guessing.
 
           ---
           STRICT OUTPUT CONTRACT (read carefully):

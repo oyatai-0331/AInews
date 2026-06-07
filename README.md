@@ -437,9 +437,10 @@ per run:
   `ANTHROPIC_API_KEY` is present. This is the default and the recommended setup.
 - **OpenAI Codex (sub)** — a *fallback* used **only when neither Claude secret is
   set** but `OPENAI_API_KEY` (or `CODEX_ACCESS_TOKEN`) is. It runs
-  [`openai/codex-action`](https://github.com/openai/codex-action) read-only with
-  live web search, and its reply is normalised back to the same schema-shaped JSON
-  by `scripts/extract_json.py`, so the deterministic Python publishers don't change.
+  [`openai/codex-action`](https://github.com/openai/codex-action) read-only and
+  fetches live sources from the runner where needed; its reply is normalised back
+  to the same schema-shaped JSON by `scripts/extract_json.py`, so the deterministic
+  Python publishers don't change.
 
 If both a Claude and an OpenAI credential are set, **Claude wins** — Codex never
 runs. With no credential at all, every job still succeeds and prints a note.
