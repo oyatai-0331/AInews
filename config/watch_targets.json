@@ -10,17 +10,38 @@
   },
   "targets": [
     {
-      "slug": "hacker-news",
-      "name": "Hacker News — Front Page",
-      "url": "https://news.ycombinator.com/",
-      "selector": ".titleline",
+      "slug": "openai-news",
+      "name": "OpenAI — News",
+      "url": "https://openai.com/news/",
       "wait_until": "domcontentloaded",
       "enabled": true
     },
     {
-      "slug": "hacker-news-show",
-      "name": "Hacker News — Show HN",
-      "url": "https://news.ycombinator.com/show",
+      "slug": "anthropic-news",
+      "name": "Anthropic — News",
+      "url": "https://www.anthropic.com/news",
+      "wait_until": "domcontentloaded",
+      "enabled": true
+    },
+    {
+      "slug": "hugging-face-papers",
+      "name": "Hugging Face — Daily Papers",
+      "url": "https://huggingface.co/papers",
+      "wait_until": "domcontentloaded",
+      "enabled": true
+    },
+    {
+      "slug": "github-changelog-ai",
+      "name": "GitHub Changelog",
+      "url": "https://github.blog/changelog/",
+      "selector": "main",
+      "wait_until": "domcontentloaded",
+      "enabled": true
+    },
+    {
+      "slug": "hacker-news",
+      "name": "Hacker News — Front Page",
+      "url": "https://news.ycombinator.com/",
       "selector": ".titleline",
       "wait_until": "domcontentloaded",
       "enabled": false
