@@ -371,7 +371,7 @@ Secrets（API キー・OAuth トークン・Slack Webhook・Resend キー）は*
 | `ENABLE_GITHUB_ISSUE` | `true` | レポートごとに Issue を作成（デフォルトオン）。 |
 | `ENABLE_FILE_OUTPUT` | `false` | 項目ごとに `outputs/<date>-<section>-<n>.md` も保存・アップロード。 |
 | `SLACK_DIGEST` | `true` | セクションごとに Slack 投稿を**1回にまとめる**（デフォルトオン）。`false` で項目ごとに1投稿。 |
-| `GITHUB_ISSUE_LABELS` | `auto-research` | 全 Issue に付く共通ラベル。 |
+| `ISSUE_LABELS` | `auto-research` | 全 Issue に付く共通ラベル。カンマ区切りで複数指定できます。 |
 | `OUTPUT_LANGUAGE` | `en` | 出力言語: `en` または `ja`。未設定ならピッカーがテーマから推論（テーマごとに記憶）。 |
 | `ANTHROPIC_MODEL` | `claude-sonnet-4-6` | 使用する Claude モデル（任意）。 |
 | `EXISTING_CONTEXT_MAX` | `40` | 重複排除のため毎回要約する過去 Issue の件数（デフォルト `40`）。 |

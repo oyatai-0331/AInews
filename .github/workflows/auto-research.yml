@@ -309,7 +309,7 @@ jobs:
           SECTION_JSON: ${{ steps.research.outputs.structured_output }}
           OUTPUT_LANGUAGE: ${{ needs.select.outputs.lang }}
           RESEARCH_TOPIC: ${{ vars.RESEARCH_TOPIC || 'AI' }}
-          GITHUB_ISSUE_LABELS: ${{ vars.GITHUB_ISSUE_LABELS || 'auto-research' }},domain:${{ needs.select.outputs.domain }}
+          GITHUB_ISSUE_LABELS: ${{ vars.ISSUE_LABELS || 'auto-research' }},domain:${{ needs.select.outputs.domain }}
           ENABLE_GITHUB_ISSUE: ${{ vars.ENABLE_GITHUB_ISSUE }}
           ENABLE_FILE_OUTPUT: ${{ vars.ENABLE_FILE_OUTPUT }}
           SLACK_DIGEST: ${{ vars.SLACK_DIGEST }}
@@ -443,7 +443,7 @@ jobs:
           SECTION_JSON: ${{ steps.research.outputs.structured_output }}
           OUTPUT_LANGUAGE: ${{ needs.select.outputs.lang }}
           RESEARCH_TOPIC: ${{ vars.RESEARCH_TOPIC || 'AI' }}
-          GITHUB_ISSUE_LABELS: ${{ vars.GITHUB_ISSUE_LABELS || 'auto-research' }},domain:${{ needs.select.outputs.domain }}
+          GITHUB_ISSUE_LABELS: ${{ vars.ISSUE_LABELS || 'auto-research' }},domain:${{ needs.select.outputs.domain }}
           ENABLE_GITHUB_ISSUE: ${{ vars.ENABLE_GITHUB_ISSUE }}
           ENABLE_FILE_OUTPUT: ${{ vars.ENABLE_FILE_OUTPUT }}
           SLACK_DIGEST: ${{ vars.SLACK_DIGEST }}
@@ -575,7 +575,7 @@ jobs:
           SECTION_JSON: ${{ steps.research.outputs.structured_output }}
           OUTPUT_LANGUAGE: ${{ needs.select.outputs.lang }}
           RESEARCH_TOPIC: ${{ vars.RESEARCH_TOPIC || 'AI' }}
-          GITHUB_ISSUE_LABELS: ${{ vars.GITHUB_ISSUE_LABELS || 'auto-research' }},domain:${{ needs.select.outputs.domain }}
+          GITHUB_ISSUE_LABELS: ${{ vars.ISSUE_LABELS || 'auto-research' }},domain:${{ needs.select.outputs.domain }}
           ENABLE_GITHUB_ISSUE: ${{ vars.ENABLE_GITHUB_ISSUE }}
           ENABLE_FILE_OUTPUT: ${{ vars.ENABLE_FILE_OUTPUT }}
           SLACK_DIGEST: ${{ vars.SLACK_DIGEST }}
@@ -729,7 +729,7 @@ jobs:
         env:
           SECTION_JSON: ${{ steps.summary.outputs.structured_output }}
           OUTPUT_LANGUAGE: ${{ needs.select.outputs.lang }}
-          GITHUB_ISSUE_LABELS: ${{ vars.GITHUB_ISSUE_LABELS || 'auto-research' }}
+          GITHUB_ISSUE_LABELS: ${{ vars.ISSUE_LABELS || 'auto-research' }}
           ENABLE_GITHUB_ISSUE: ${{ vars.ENABLE_GITHUB_ISSUE }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

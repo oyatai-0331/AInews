@@ -246,7 +246,7 @@ renderer in `scripts/publish_section.py` — see [Going further](#going-further)
 
 ### 9. Adjust labels and the model
 
-- `GITHUB_ISSUE_LABELS` — shared label(s) added to every Issue (default `auto-research`). Each report also gets its own tag (`research-news` / `hypothesis` / `related-work`).
+- `ISSUE_LABELS` — shared label(s) added to every Issue (default `auto-research`). Each report also gets its own tag (`research-news` / `hypothesis` / `related-work`).
 - `ENABLE_GITHUB_ISSUE` — set to `false` to stop creating Issues (pair with `ENABLE_FILE_OUTPUT` to get files instead).
 - `ANTHROPIC_MODEL` — override the Claude model (default `claude-sonnet-4-6`).
 
@@ -392,7 +392,7 @@ two tabs there: **Variables** (non-sensitive, visible in logs) and **Secrets**
 | `ENABLE_GITHUB_ISSUE` | `true` | Create one Issue per item (default on). |
 | `ENABLE_FILE_OUTPUT` | `false` | Also write & upload `outputs/<date>-<section>-<n>.md` (one file per item). |
 | `SLACK_DIGEST` | `true` | Bundle each section into a **single** Slack post (default on). Set `false` to post one Slack message per item. |
-| `GITHUB_ISSUE_LABELS` | `auto-research` | Shared label(s) on every Issue. |
+| `ISSUE_LABELS` | `auto-research` | Shared label(s) on every Issue. Use a comma-separated list for multiple labels. |
 | `OUTPUT_LANGUAGE` | `en` | Output language: `en` or `ja`. Leave unset to let the picker infer it from the topic (remembered per topic). |
 | `ANTHROPIC_MODEL` | `claude-sonnet-4-6` | Claude model to use (optional). |
 | `EXISTING_CONTEXT_MAX` | `40` | How many prior Issues to summarise each run for de-duplication (default `40`). |
