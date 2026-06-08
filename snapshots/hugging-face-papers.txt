@@ -39,50 +39,92 @@ Weekly
 Monthly
 Jun 8
 Submitted by
-Insta360-Research
-5
-UniSHARP: Universal Sharp Monocular View Synthesis
+shwu
+69
+Your UnEmbedding Matrix is Secretly a Feature Lens for Text Embeddings
 ·
-7 authors
-9
+6 authors
+10
+3
+Submitted by
+hamzzi
+42
+SoCRATES: Towards Reliable Automated Evaluation of Proactive LLM Mediation across Domains and Socio-cognitive Variations
+Data Intelligence System Lab
+2
+Submitted by
+darlednik
+42
+GENEB: Why Genomic Models Are Hard to Compare
+·
+3 authors
+10
 1
 Submitted by
-taesiri
+BoJack
+38
+MMAE: A Massive Multitask Audio Editing Benchmark
+·
+38 authors
+65
+2
+Submitted by
+lyabc
+24
+AnchorWorld: Embodied Egocentric World Simulation with View-based Evolution Customization
+Kling Team
 1
-dots.tts Technical Report
+Submitted by
+superGong
+22
+Direct 3D-Aware Object Insertion via Decomposed Visual Proxies
 ·
 9 authors
-210
-1
+31
+2
 Submitted by
-adivekar
-1
-When Gradients Collide: Failure Modes of Multi-Objective Prompt Optimization for LLM Judges
-Amazon
-1
-1
-Submitted by
-taesiri
--
-Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills
+hba123
+20
+Robots Need More than VLA and World Models
 ·
-8 authors
+9 authors
+1
+Submitted by
+dongsheng
+18
+When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents
+BAIDU
+2
 1
 Submitted by
 taesiri
--
-WorldBench: A Challenging and Visually Diverse Multimodal Reasoning Benchmark
-·
-12 authors
-1
-Submitted by
-taesiri
--
+17
 OpenSkill: Open-World Self-Evolution for LLM Agents
 ·
 11 authors
 1
-Previous
+Submitted by
+Yummytanmo
+17
+SubtleMemory: A Benchmark for Fine-Grained Relational Memory Discrimination in Long-Horizon AI Agents
+·
+7 authors
+14
+1
+Submitted by
+Insta360-Research
+13
+UniSHARP: Universal Sharp Monocular View Synthesis
+·
+7 authors
+32
+1
+Submitted by
+qizekun
+12
+LIMMT: Less is More for Motion Tracking
+galbot
+1
 System theme
 TOS
 Privacy

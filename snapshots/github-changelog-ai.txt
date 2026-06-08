@@ -8,6 +8,10 @@ IMPROVEMENTS
 RETIRED
 FILTERS
 June 2026
+JUN.08
+IMPROVEMENT
+IP allow list coverage for EMU namespaces in general availability
+ENTERPRISE MANAGEMENT TOOLS
 JUN.05
 RETIRED
 GPT-5.2 and GPT-5.2-Codex deprecated
