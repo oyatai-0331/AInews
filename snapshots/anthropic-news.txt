@@ -13,14 +13,18 @@ Non-media inquiries
 How to get support
 Media assets
 Download press kit
-Introducing Claude Opus 4.8
-Product
-May 28, 2026
-An upgrade to our Opus class of models, with stronger performance across coding, agentic tasks, and professional work, and the consistency to handle long-running work.
+Claude Fable 5 and Claude Mythos 5
+Announcements
+Jun 9, 2026
+Our next generation of intelligence for the hardest knowledge work and coding problems.
 Announcements
 Jun 2, 2026
 Expanding Project Glasswing
 We’re extending Project Glasswing to approximately 150 new organizations in more than fifteen countries.
+Product
+May 28, 2026
+Introducing Claude Opus 4.8
+An upgrade to our Opus class of models, with stronger performance across coding, agentic tasks, and professional work, and the consistency to handle long-running work.
 Announcements
 May 25, 2026
 Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical "Magnifica humanitas"
@@ -29,15 +33,14 @@ Announcements
 May 19, 2026
 Widening the conversation on frontier AI
 Over the past several months, we’ve been organizing dialogues with groups whose work and traditions bear on the questions raised by AI.
-Announcements
-Apr 24, 2026
-An update on our election safeguards
-We explain what we’re doing to ensure Claude plays a positive role in the US midterms and other major elections around the world this year.
 News
 Search
 DATE
 CATEGORY
 TITLE
+Jun 9, 2026
+Announcements
+Claude Fable 5 and Claude Mythos 5
 Jun 3, 2026
 Announcements
 Introducing the Services Track and Partner Hub of the Claude Partner Network
@@ -65,9 +68,6 @@ Anthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seo
 May 25, 2026
 Announcements
 Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical "Magnifica humanitas"
-May 22, 2026
-Announcements
-Project Glasswing: An initial update
 See more
 Products
 Claude
@@ -83,7 +83,8 @@ Download app
 Pricing
 Log in to Claude
 Models
-Mythos Preview
+Mythos
+Fable
 Opus
 Sonnet
 Haiku

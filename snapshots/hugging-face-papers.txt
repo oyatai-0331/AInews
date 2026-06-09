@@ -37,93 +37,90 @@ byAK and the research community
 Daily
 Weekly
 Monthly
-Jun 8
+Jun 9
 Submitted by
-shwu
-69
-Your UnEmbedding Matrix is Secretly a Feature Lens for Text Embeddings
+YerbaPage
+95
+SWE-Explore: Benchmarking How Coding Agents Explore Repositories
+Shanghai Jiao Tong University
+10
+1
+Submitted by
+5456es
+56
+On the Geometry of On-Policy Distillation
+香港科技大学
+1
+Submitted by
+SorrowTea
+50
+LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents
 ·
-6 authors
+11 authors
+3
+Submitted by
+lhmd
+47
+Latent Spatial Memory for Video World Models
+Microsoft Research
+70
+1
+Submitted by
+Jessamine
+44
+CoVEBench: Can Video Editing Models Handle Complex Instructions?
+NJU-LINK Lab
+9
+2
+Submitted by
+libertywing
+42
+FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention
+Tencent
 10
 3
 Submitted by
-hamzzi
-42
-SoCRATES: Towards Reliable Automated Evaluation of Proactive LLM Mediation across Domains and Socio-cognitive Variations
-Data Intelligence System Lab
-2
-Submitted by
-darlednik
-42
-GENEB: Why Genomic Models Are Hard to Compare
-·
-3 authors
-10
+XinyangDavidHan
+41
+Agents' Last Exam
+UC Berkeley
+183
 1
 Submitted by
-BoJack
-38
-MMAE: A Massive Multitask Audio Editing Benchmark
-·
-38 authors
-65
-2
-Submitted by
-lyabc
-24
-AnchorWorld: Embodied Egocentric World Simulation with View-based Evolution Customization
-Kling Team
+HongchengGao
+37
+SpatialWorld: Benchmarking Interactive Spatial Reasoning of Multimodal Agents in Real-World Tasks
+Tsinghua University
+30
 1
 Submitted by
-superGong
-22
-Direct 3D-Aware Object Insertion via Decomposed Visual Proxies
-·
-9 authors
+Opusdei
 31
-2
-Submitted by
-hba123
-20
-Robots Need More than VLA and World Models
-·
-9 authors
-1
-Submitted by
-dongsheng
-18
-When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents
-BAIDU
-2
+Human Psychometric Questionnaires Mischaracterize LLM Behavior
+Seoul National University
 1
 Submitted by
 taesiri
-17
-OpenSkill: Open-World Self-Evolution for LLM Agents
+27
+Echo-Memory: A Controlled Study of Memory in Action World Models
 ·
-11 authors
+16 authors
+87
 1
 Submitted by
-Yummytanmo
-17
-SubtleMemory: A Benchmark for Fine-Grained Relational Memory Discrimination in Long-Horizon AI Agents
-·
-7 authors
-14
-1
+mxlin043
+16
+OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics
+Hong Kong University
+30
+2
 Submitted by
-Insta360-Research
-13
-UniSHARP: Universal Sharp Monocular View Synthesis
+taesiri
+15
+End-to-End Context Compression at Scale
 ·
-7 authors
-32
-1
-Submitted by
-qizekun
-12
-LIMMT: Less is More for Motion Tracking
-galbot
+15 authors
+5
 1
 System theme
 TOS

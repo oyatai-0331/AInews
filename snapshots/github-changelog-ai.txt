@@ -8,6 +8,26 @@ IMPROVEMENTS
 RETIRED
 FILTERS
 June 2026
+JUN.09
+RETIRED
+Upcoming breaking changes for npm v12
+SUPPLY CHAIN SECURITY
+JUN.09
+RELEASE
+Claude Fable 5 is generally available for GitHub Copilot
+COPILOT
+JUN.09
+RELEASE
+Periodic code scanning of inactive repositories
+APPLICATION SECURITY
+...
++1
+JUN.09
+IMPROVEMENT
+Security validation for third-party coding agents
+APPLICATION SECURITY
+...
++1
 JUN.08
 IMPROVEMENT
 IP allow list coverage for EMU namespaces in general availability
