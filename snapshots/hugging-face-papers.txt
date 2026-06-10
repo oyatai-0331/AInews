@@ -37,90 +37,90 @@ byAK and the research community
 Daily
 Weekly
 Monthly
-Jun 9
+Jun 10
 Submitted by
-YerbaPage
-95
-SWE-Explore: Benchmarking How Coding Agents Explore Repositories
-Shanghai Jiao Tong University
-10
-1
-Submitted by
-5456es
-56
-On the Geometry of On-Policy Distillation
-香港科技大学
-1
-Submitted by
-SorrowTea
-50
-LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents
-·
-11 authors
+qian43
+193
+ABot-Earth 0.5: Generative 3D Earth Model
+Alibaba AMAP CV Lab
+104
 3
 Submitted by
-lhmd
+liangtm
+166
+Kwai Keye-VL-2.0 Technical Report
+Kwai Keye
+785
+1
+Submitted by
+xuc865
+73
+Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution
+·
+7 authors
+74
+2
+Submitted by
+wenbopan
 47
-Latent Spatial Memory for Video World Models
+Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory Rollouts
 Microsoft Research
-70
+14
 1
 Submitted by
-Jessamine
-44
-CoVEBench: Can Video Editing Models Handle Complex Instructions?
-NJU-LINK Lab
-9
+QQqqrabit
+43
+SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research
+SearchSwarm
+56
 2
 Submitted by
-libertywing
-42
-FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention
-Tencent
-10
+YZCS
+35
+MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism
+inclusionAI
+1
+Submitted by
+P2333
+31
+Flow-DPPO: Divergence Proximal Policy Optimization for Flow Matching Models
+Tencent-Hunyuan-Multimodal-RL
+2
+Submitted by
+taesiri
+31
+SCAIL-2: Unifying Controlled Character Animation with End-to-end In-Context Conditioning
+·
+4 authors
+156
+1
+Submitted by
+YJ-142150
+27
+Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization
+KAIST AI
+24
+1
+Submitted by
+hzeroyuke
+27
+WorldOlympiad: Can Your World Model Survive a Triathlon?
+DAMO Academy
+34
+1
+Submitted by
+zhouxiangxin
+26
+Rethinking the Divergence Regularization in LLM RL
+Tencent-Hunyuan-Multimodal-RL
+408
 3
 Submitted by
-XinyangDavidHan
-41
-Agents' Last Exam
-UC Berkeley
-183
-1
-Submitted by
-HongchengGao
-37
-SpatialWorld: Benchmarking Interactive Spatial Reasoning of Multimodal Agents in Real-World Tasks
-Tsinghua University
-30
-1
-Submitted by
-Opusdei
-31
-Human Psychometric Questionnaires Mischaracterize LLM Behavior
-Seoul National University
-1
-Submitted by
-taesiri
-27
-Echo-Memory: A Controlled Study of Memory in Action World Models
-·
-16 authors
-87
-1
-Submitted by
-mxlin043
+ShilongLiu
 16
-OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics
-Hong Kong University
-30
-2
-Submitted by
-taesiri
-15
-End-to-End Context Compression at Scale
-·
-15 authors
-5
+EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents
+Princeton AI Lab
+4
 1
 System theme
 TOS

@@ -1,7 +1,7 @@
 Skip to main content
 Skip to footer
 Research
-Economic Futures
+Policy
 Commitments
 Learn
 News
@@ -17,6 +17,10 @@ Claude Fable 5 and Claude Mythos 5
 Announcements
 Jun 9, 2026
 Our next generation of intelligence for the hardest knowledge work and coding problems.
+Policy
+Jun 10, 2026
+Policy on the AI Exponential
+AI is advancing at exponential speed, and the policymaking process was built for a slower world. We’re sharing policy proposals to prepare our institutions for AI progress.
 Announcements
 Jun 2, 2026
 Expanding Project Glasswing
@@ -29,10 +33,6 @@ Announcements
 May 25, 2026
 Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical "Magnifica humanitas"
 The full text of Chris Olah's remarks on the Pope's encyclical on AI.
-Announcements
-May 19, 2026
-Widening the conversation on frontier AI
-Over the past several months, we’ve been organizing dialogues with groups whose work and traditions bear on the questions raised by AI.
 News
 Search
 DATE
@@ -139,10 +139,12 @@ Support center
 Company
 Anthropic
 Careers
+Policy
 Economic Futures
 Research
 News
 Claude’s Constitution
+Policy on the AI Exponential
 Responsible Scaling Policy
 Security and compliance
 Transparency
