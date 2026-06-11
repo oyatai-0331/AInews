@@ -37,90 +37,90 @@ byAK and the research community
 Daily
 Weekly
 Monthly
-Jun 10
+Jun 11
 Submitted by
-qian43
-193
-ABot-Earth 0.5: Generative 3D Earth Model
-Alibaba AMAP CV Lab
-104
-3
-Submitted by
-liangtm
-166
-Kwai Keye-VL-2.0 Technical Report
-Kwai Keye
-785
-1
-Submitted by
-xuc865
-73
-Role-Agent: Bootstrapping LLM Agents via Dual-Role Evolution
-·
-7 authors
+shwu
 74
+Redesign Mixture-of-Experts Routers with Manifold Power Iteration
+·
+4 authors
+4
 2
 Submitted by
-wenbopan
-47
-Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory Rollouts
-Microsoft Research
+namespace-ERI
+67
+Toward Generalist Autonomous Research via Hypothesis-Tree Refinement
+NLPIR Lab @ RUC
+63
+3
+Submitted by
+jinzhuoran
+56
+Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application
+Chinese Academy of Sciences
+1
+Submitted by
+hankaixyz
+55
+Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks
+TokenRhythm
+9
+1
+Submitted by
+Orion-Cai
+49
+Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions
+Tongyi-MAI
+1
+Submitted by
+weipang142857
+46
+TRL-Bench: Standardizing Cross-Paradigm Representation-Level Evaluation of Tabular Encoders
+Chinese University of Hong Kong, Shenzhen
+4
+2
+Submitted by
+chaofanma
+27
+Reason, Then Re-reason: Cross-view Revisiting Improves Spatial Reasoning
+Shanghai Jiao Tong University
+1
+Submitted by
+GuoxinChen
+27
+DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch
+AweAI Team
+27
+1
+Submitted by
+Chedan86
+22
+World Pilot: Steering Vision-Language-Action Models with World-Action Priors
+·
+7 authors
+9
+1
+Submitted by
+anamariarobertap
+20
+On Subquadratic Architectures: From Applications to Principles
+·
+9 authors
+2
+Submitted by
+zzzhr97
+18
+ComBench: A Benchmark for Rigorous Proof Reasoning and Constructive Realization in Olympiad-Level Combinatorics
+Simplified Reasoning
 14
 1
 Submitted by
-QQqqrabit
-43
-SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research
-SearchSwarm
-56
-2
-Submitted by
-YZCS
-35
-MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism
-inclusionAI
-1
-Submitted by
-P2333
-31
-Flow-DPPO: Divergence Proximal Policy Optimization for Flow Matching Models
-Tencent-Hunyuan-Multimodal-RL
-2
-Submitted by
-taesiri
-31
-SCAIL-2: Unifying Controlled Character Animation with End-to-end In-Context Conditioning
+yitong42
+17
+Grammar-Constrained Decoding Can Jailbreak LLMs into Generating Malicious Code
 ·
-4 authors
-156
-1
-Submitted by
-YJ-142150
-27
-Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization
-KAIST AI
-24
-1
-Submitted by
-hzeroyuke
-27
-WorldOlympiad: Can Your World Model Survive a Triathlon?
-DAMO Academy
-34
-1
-Submitted by
-zhouxiangxin
-26
-Rethinking the Divergence Regularization in LLM RL
-Tencent-Hunyuan-Multimodal-RL
-408
+3 authors
 3
-Submitted by
-ShilongLiu
-16
-EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents
-Princeton AI Lab
-4
 1
 System theme
 TOS

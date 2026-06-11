@@ -8,6 +8,42 @@ IMPROVEMENTS
 RETIRED
 FILTERS
 June 2026
+JUN.11
+IMPROVEMENT
+Bot-created pull requests can run workflows if approved
+ACTIONS
+JUN.11
+IMPROVEMENT
+AI usage report updates
+ENTERPRISE MANAGEMENT TOOLS
+JUN.11
+RELEASE
+Copilot CLI: Configure everything from one place with /settings
+CLIENT APPS
+...
++1
+JUN.11
+RELEASE
+New runner images in public preview
+ACTIONS
+JUN.11
+RELEASE
+GitHub Agentic Workflows is now in public preview
+ACTIONS
+...
++1
+JUN.11
+RELEASE
+Agentic workflows no longer need a personal access token
+COPILOT
+JUN.10
+RELEASE
+List, view, and create discussions in GitHub CLI
+CLIENT APPS
+JUN.10
+RELEASE
+Manage sub-issues, types, and dependencies from GitHub CLI
+CLIENT APPS
 JUN.10
 RELEASE
 Copilot Chat now sees your agent sessions
@@ -18,6 +54,10 @@ Enterprises can now create up to 500 cost centers
 ACCOUNT MANAGEMENT
 ...
 +1
+JUN.10
+IMPROVEMENT
+Incremental analysis for Go, C/C++, and CodeQL CLI
+APPLICATION SECURITY
 JUN.10
 IMPROVEMENT
 Dedicated security review command now available in Copilot CLI
