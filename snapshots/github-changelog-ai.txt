@@ -8,6 +8,14 @@ IMPROVEMENTS
 RETIRED
 FILTERS
 June 2026
+JUN.12
+RETIRED
+GitHub Actions: Minimum version enforcement timeline for self-hosted runners
+ACTIONS
+JUN.11
+RELEASE
+GitHub Enterprise Server 3.21 is now generally available
+COLLABORATION TOOLS
 JUN.11
 IMPROVEMENT
 Bot-created pull requests can run workflows if approved

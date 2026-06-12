@@ -37,90 +37,91 @@ byAK and the research community
 Daily
 Weekly
 Monthly
-Jun 11
+Jun 12
 Submitted by
-shwu
-74
-Redesign Mixture-of-Experts Routers with Manifold Power Iteration
+zhiyuanhucs
+102
+EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments
+Massachusetts Institute of Technology
+8
+1
+Submitted by
+cmhungsteve
+79
+SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning
+NVIDIA
+40
+1
+Submitted by
+ryanlee-dev
+77
+MiniMax Sparse Attention
+MiniMax
+184
+1
+Submitted by
+zhengli1013
+72
+InterleaveThinker: Reinforcing Agentic Interleaved Generation
 ·
-4 authors
-4
+7 authors
+76
+1
+Submitted by
+Jiaqi-hkust
+71
+Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?
+·
+9 authors
+72
 2
 Submitted by
 namespace-ERI
-67
-Toward Generalist Autonomous Research via Hypothesis-Tree Refinement
-NLPIR Lab @ RUC
-63
-3
-Submitted by
-jinzhuoran
-56
-Agentic Environment Engineering for Large Language Models: A Survey of Environment Modeling, Synthesis, Evaluation, and Application
-Chinese Academy of Sciences
-1
-Submitted by
-hankaixyz
-55
-Claw-SWE-Bench: A Benchmark for Evaluating OpenClaw-style Agent Harnesses on Coding Tasks
-TokenRhythm
-9
-1
-Submitted by
-Orion-Cai
-49
-Beyond Scalar Rewards by Internalizing Reasoning into Score Distributions
-Tongyi-MAI
-1
-Submitted by
-weipang142857
-46
-TRL-Bench: Standardizing Cross-Paradigm Representation-Level Evaluation of Tabular Encoders
-Chinese University of Hong Kong, Shenzhen
-4
-2
-Submitted by
-chaofanma
-27
-Reason, Then Re-reason: Cross-view Revisiting Improves Spatial Reasoning
-Shanghai Jiao Tong University
-1
-Submitted by
-GuoxinChen
-27
-DeNovoSWE: Scaling Long-Horizon Environments for Generating Entire Repositories from Scratch
-AweAI Team
-27
-1
-Submitted by
-Chedan86
-22
-World Pilot: Steering Vision-Language-Action Models with World-Action Priors
+70
+FORT-Searcher: Synthesizing Shortcut-Resistant Search Tasks for Training Deep Search Agents
 ·
-7 authors
-9
-1
-Submitted by
-anamariarobertap
-20
-On Subquadratic Architectures: From Applications to Principles
-·
-9 authors
-2
-Submitted by
-zzzhr97
-18
-ComBench: A Benchmark for Rigorous Proof Reasoning and Constructive Realization in Olympiad-Level Combinatorics
-Simplified Reasoning
-14
-1
-Submitted by
-yitong42
+12 authors
 17
-Grammar-Constrained Decoding Can Jailbreak LLMs into Generating Malicious Code
+1
+Submitted by
+taesiri
+68
+MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Population-Level Test-Time Scaling
+MiniMax
+Submitted by
+wanlilll
+54
+WeaveBench: A Long-Horizon, Real-World Benchmark for Computer-Use Agents with Hybrid Interfaces
+Microsoft
+35
+1
+Submitted by
+taesiri
+49
+LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories
 ·
-3 authors
-3
+18 authors
+44
+1
+Submitted by
+zgzaacm
+23
+HYDRA-X: Native Unified Multimodal Models with Holistic Visual Tokenizers
+Nanjing University
+1
+Submitted by
+MoonKuun
+20
+N-GRPO: Embedding-Level Neighbor Mixing for Enhanced Policy Optimization
+·
+4 authors
+1
+Submitted by
+amyxx2001
+18
+EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery
+Knowledge Engineer Group @ Tsinghua University
+17
 1
 System theme
 TOS
