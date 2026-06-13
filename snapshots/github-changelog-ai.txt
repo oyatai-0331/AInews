@@ -9,6 +9,10 @@ RETIRED
 FILTERS
 June 2026
 JUN.12
+IMPROVEMENT
+Copilot code review: New configurations and controls
+COPILOT
+JUN.12
 RETIRED
 GitHub Actions: Minimum version enforcement timeline for self-hosted runners
 ACTIONS

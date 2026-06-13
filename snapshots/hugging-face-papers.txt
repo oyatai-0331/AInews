@@ -40,89 +40,90 @@ Monthly
 Jun 12
 Submitted by
 zhiyuanhucs
-102
+118
 EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments
 Massachusetts Institute of Technology
-8
-1
-Submitted by
-cmhungsteve
-79
-SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning
-NVIDIA
-40
-1
+9
+3
 Submitted by
 ryanlee-dev
-77
+99
 MiniMax Sparse Attention
 MiniMax
-184
-1
-Submitted by
-zhengli1013
-72
-InterleaveThinker: Reinforcing Agentic Interleaved Generation
-·
-7 authors
-76
-1
-Submitted by
-Jiaqi-hkust
-71
-Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?
-·
-9 authors
-72
-2
-Submitted by
-namespace-ERI
-70
-FORT-Searcher: Synthesizing Shortcut-Resistant Search Tasks for Training Deep Search Agents
-·
-12 authors
-17
-1
-Submitted by
-taesiri
-68
-MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Population-Level Test-Time Scaling
-MiniMax
+240
+4
 Submitted by
 wanlilll
-54
+94
 WeaveBench: A Long-Horizon, Real-World Benchmark for Computer-Use Agents with Hybrid Interfaces
 Microsoft
 35
-1
+2
+Submitted by
+cmhungsteve
+80
+SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning
+NVIDIA
+62
+3
+Submitted by
+zhengli1013
+74
+InterleaveThinker: Reinforcing Agentic Interleaved Generation
+·
+7 authors
+110
+3
 Submitted by
 taesiri
-49
+73
+MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Population-Level Test-Time Scaling
+MiniMax
+1
+Submitted by
+Jiaqi-hkust
+73
+Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?
+·
+9 authors
+75
+3
+Submitted by
+namespace-ERI
+71
+FORT-Searcher: Synthesizing Shortcut-Resistant Search Tasks for Training Deep Search Agents
+·
+12 authors
+18
+2
+Submitted by
+taesiri
+52
 LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories
 ·
 18 authors
-44
-1
+46
+2
 Submitted by
 zgzaacm
-23
+25
 HYDRA-X: Native Unified Multimodal Models with Holistic Visual Tokenizers
 Nanjing University
-1
+2
 Submitted by
 MoonKuun
-20
+22
 N-GRPO: Embedding-Level Neighbor Mixing for Enhanced Policy Optimization
 ·
 4 authors
-1
+2
 Submitted by
 amyxx2001
-18
+21
 EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery
 Knowledge Engineer Group @ Tsinghua University
-17
-1
+22
+2
 System theme
 TOS
 Privacy
