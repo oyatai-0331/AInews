@@ -40,53 +40,53 @@ Monthly
 Jun 12
 Submitted by
 zhiyuanhucs
-118
+125
 EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments
 Massachusetts Institute of Technology
-9
+12
 3
 Submitted by
 ryanlee-dev
-99
+117
 MiniMax Sparse Attention
 MiniMax
-240
+262
 4
 Submitted by
 wanlilll
-94
+97
 WeaveBench: A Long-Horizon, Real-World Benchmark for Computer-Use Agents with Hybrid Interfaces
 Microsoft
-35
+36
 2
 Submitted by
 cmhungsteve
-80
+86
 SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning
 NVIDIA
-62
+70
 3
 Submitted by
 zhengli1013
-74
+77
 InterleaveThinker: Reinforcing Agentic Interleaved Generation
 ·
 7 authors
-110
+124
 3
 Submitted by
 taesiri
-73
+76
 MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Population-Level Test-Time Scaling
 MiniMax
 1
 Submitted by
 Jiaqi-hkust
-73
+74
 Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?
 ·
 9 authors
-75
+102
 3
 Submitted by
 namespace-ERI
@@ -102,28 +102,28 @@ taesiri
 LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories
 ·
 18 authors
-46
+49
 2
+Submitted by
+Yunqiu
+31
+VIA-SD: Verification via Intra-Model Routing for Speculative Decoding
+·
+4 authors
+4
+Submitted by
+Yunqiu
+29
+From 2D Grids to 1D Tokens: Reforming Shared Representations for Multimodal Image Fusion
+·
+4 authors
+3
 Submitted by
 zgzaacm
 25
 HYDRA-X: Native Unified Multimodal Models with Holistic Visual Tokenizers
 Nanjing University
-2
-Submitted by
-MoonKuun
-22
-N-GRPO: Embedding-Level Neighbor Mixing for Enhanced Policy Optimization
-·
-4 authors
-2
-Submitted by
-amyxx2001
-21
-EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery
-Knowledge Engineer Group @ Tsinghua University
-22
-2
+3
 System theme
 TOS
 Privacy
