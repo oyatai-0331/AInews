@@ -8,6 +8,12 @@ IMPROVEMENTS
 RETIRED
 FILTERS
 June 2026
+JUN.15
+IMPROVEMENT
+Copilot usage metrics now include more of your active users
+ACCOUNT MANAGEMENT
+...
++2
 JUN.12
 IMPROVEMENT
 Copilot code review: New configurations and controls

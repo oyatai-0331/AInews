@@ -37,93 +37,90 @@ byAK and the research community
 Daily
 Weekly
 Monthly
-Jun 12
+Jun 15
 Submitted by
-zhiyuanhucs
-125
-EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments
-Massachusetts Institute of Technology
-12
+yawenluo
+91
+OmniDirector: General Multi-Shot Camera Cloning without Cross-Paired Data
+Kling Team
+27
 3
 Submitted by
-ryanlee-dev
-117
-MiniMax Sparse Attention
-MiniMax
-262
-4
-Submitted by
-wanlilll
-97
-WeaveBench: A Long-Horizon, Real-World Benchmark for Computer-Use Agents with Hybrid Interfaces
-Microsoft
-36
+seashell11
+62
+APPO: Agentic Procedural Policy Optimization
+·
+8 authors
+53
 2
 Submitted by
-cmhungsteve
-86
-SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning
-NVIDIA
-70
-3
-Submitted by
-zhengli1013
-77
-InterleaveThinker: Reinforcing Agentic Interleaved Generation
-·
-7 authors
-124
-3
-Submitted by
-taesiri
-76
-MaxProof: Scaling Mathematical Proof with Generative-Verifier RL and Population-Level Test-Time Scaling
-MiniMax
+liushiliushi
+55
+Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents
+National University of Singapore
+51
 1
 Submitted by
-Jiaqi-hkust
-74
-Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?
+liyinghui1998
+42
+From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI
 ·
-9 authors
-102
-3
+20 authors
+1
 Submitted by
-namespace-ERI
-71
-FORT-Searcher: Synthesizing Shortcut-Resistant Search Tasks for Training Deep Search Agents
-·
-12 authors
-18
-2
+Karl28
+37
+Orchestra-o1: Omnimodal Agent Orchestration
+The Chinese University of Hong Kong
+39
+7
 Submitted by
 taesiri
-52
-LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories
+33
+HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry
 ·
-18 authors
-49
+14 authors
+Submitted by
+Myyhlee
+32
+Rethinking RAG in Long Videos: What to Retrieve and How to Use It?
+Data Intelligence System Lab
 2
 Submitted by
-Yunqiu
-31
-VIA-SD: Verification via Intra-Model Routing for Speculative Decoding
-·
-4 authors
+yifanzhang114
+23
+OmniVideo-100K: A Dataset for Audio-Visual Reasoning through Structured Scripts and Evidence Chains
+Nanjing University
+29
+1
+Submitted by
+cfahlgren1
+23
+From AGI to ASI
+Google
 4
 Submitted by
-Yunqiu
-29
-From 2D Grids to 1D Tokens: Reforming Shared Representations for Multimodal Image Fusion
+qishisuren
+19
+Smaller Models are Natural Explorers for Policy-Level Diversity in GRPO
 ·
-4 authors
-3
+11 authors
+13
+1
 Submitted by
-zgzaacm
-25
-HYDRA-X: Native Unified Multimodal Models with Holistic Visual Tokenizers
-Nanjing University
-3
+HongjianZhou
+15
+Measuring Epistemic Resilience of LLMs Under Misleading Medical Context
+University of Oxford
+1
+Submitted by
+xushuwen23
+15
+RedAct: Redacting Agent Capability Traces for Procedural Skill Protection
+·
+3 authors
+13
+1
 System theme
 TOS
 Privacy
