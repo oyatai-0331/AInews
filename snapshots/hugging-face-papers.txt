@@ -37,89 +37,88 @@ byAK and the research community
 Daily
 Weekly
 Monthly
-Jun 15
+Jun 16
 Submitted by
-yawenluo
-91
-OmniDirector: General Multi-Shot Camera Cloning without Cross-Paired Data
-Kling Team
-27
+iieycx
+157
+JoyAI-VL-Interaction: Real-Time Vision-Language Interaction Intelligence
+JD.com Open Source
+209
+1
+Submitted by
+KevinQHLin
+100
+Data Journalist Agent: Transforming Data into Verifiable Multimodal Stories
+University of Oxford
+45
 3
 Submitted by
-seashell11
-62
-APPO: Agentic Procedural Policy Optimization
-·
-8 authors
-53
+hongsunghwan
+84
+Geometric Action Model for Robot Policy Learning
+ETH Zürich
+56
 2
 Submitted by
-liushiliushi
-55
-Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents
-National University of Singapore
-51
+AdinaY
+78
+DreamX-World 1.0: A General-Purpose Interactive World Model
+AMAP-ML
+318
+6
+Submitted by
+qiushao
+76
+FastContext: Training Efficient Repository Explorer for Coding Agents
+Microsoft
+312
+2
+Submitted by
+SenXu1123
+62
+VibeThinker-3B: Exploring the Frontier of Verifiable Reasoning in Small Language Models
+WeiboAI
+597
 1
 Submitted by
-liyinghui1998
-42
-From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI
+yulunliu
+24
+BRDFusion: Physics Meets Generation for Urban Scene Inverse Rendering
 ·
-20 authors
+5 authors
+21
 1
 Submitted by
-Karl28
-37
-Orchestra-o1: Omnimodal Agent Orchestration
-The Chinese University of Hong Kong
-39
-7
+yoon6503
+23
+Who Should Lead Decoding Now? Tracking Reliable Trajectories for Ensembling Masked Diffusion Language Models
+KAIST AI
+1
 Submitted by
 taesiri
-33
-HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry
-·
-14 authors
+21
+VisualClaw: A Real-Time, Personalized Agent for the Physical World
+UCSC-VLAA
+15
 Submitted by
-Myyhlee
-32
-Rethinking RAG in Long Videos: What to Retrieve and How to Use It?
-Data Intelligence System Lab
-2
-Submitted by
-yifanzhang114
-23
-OmniVideo-100K: A Dataset for Audio-Visual Reasoning through Structured Scripts and Evidence Chains
-Nanjing University
-29
-1
-Submitted by
-cfahlgren1
-23
-From AGI to ASI
-Google
-4
-Submitted by
-qishisuren
-19
-Smaller Models are Natural Explorers for Policy-Level Diversity in GRPO
+TangJiakai5704
+14
+OneRank: Unified Transformer-Native Ranking Architecture for Multi-Task Recommendation
 ·
 11 authors
-13
 1
 Submitted by
-HongjianZhou
-15
-Measuring Epistemic Resilience of LLMs Under Misleading Medical Context
-University of Oxford
+adamdad
+14
+BadWorld: Adversarial Attacks on World Models
+The Hong Kong Polytechnic University
+7
 1
 Submitted by
-xushuwen23
-15
-RedAct: Redacting Agent Capability Traces for Procedural Skill Protection
-·
-3 authors
-13
+taesiri
+14
+Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation
+Qwen
 1
 System theme
 TOS

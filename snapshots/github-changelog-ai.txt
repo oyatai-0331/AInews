@@ -8,6 +8,22 @@ IMPROVEMENTS
 RETIRED
 FILTERS
 June 2026
+JUN.16
+RETIRED
+GitHub Models is no longer available to new customers
+ECOSYSTEM & ACCESSIBILITY
+JUN.16
+RELEASE
+GitHub Code Quality generally available July 20, 2026
+APPLICATION SECURITY
+...
++1
+JUN.16
+RELEASE
+Organization-level enablement for GitHub Code Quality
+APPLICATION SECURITY
+...
++1
 JUN.15
 IMPROVEMENT
 Copilot usage metrics now include more of your active users
